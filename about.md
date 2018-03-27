@@ -1,42 +1,21 @@
 ---
 layout: page
-title: 关于我 
+title: About me
 ---
+研究生在读，希望将来成为一名前端工程师。
 
-一个 iOS SDK 开发者，喜欢研究一些新技术。
-<p>
-平时喜欢整理个人博客，逛逛技术论坛。
-<p>
-了解一些 前端 基本概念和 Python 的简单用法。
+热爱生活，热爱电影，爱好前端开发，探索web世界！
 
-<p>
+有空整理博客，不同学习新知识。
 
-<h3> 我们的博客 </h3>  
+- 了解前端基本知识，`HTML`、`CSS`、`JavaScript`；`JQuery`、`Node.js`；
+- 了解基本的`PHP`语法、`MySQL`数据库操作；
+- 了解Python的基本语法和简单用法；
+- 了解C#的基本语法，Unity3D的使用。
 
-<p>
 
-是的，这个博客是我们大家的，目前已经有很大一部分人在使用我的博客模板了，我也很高兴大家使用我的模板。
-
-<p>
-
-如果你想搭建一个跟我一样的博客，可以看我的 
-<a href="/2016/10/jekyll_tutorials1/"> Jekyll 搭建个人博客 </a>
-教程
-
-<p>
-
-有关于博客主题的建议和意见都可以提给我，让我们一起来打造一个精美的主题吧~ 
-
-<p> 
-
-博客源码在 <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
-
-<p> 
-
-<p> 
-
-<p> 
+### 我的博客
+在这里记录学习历程，希望能和志同道合的人在这里交流。
 
 
 {% include comments.html %}
-
