@@ -5,7 +5,7 @@ date: 2018-04-3
 description: "mongoDB的安装及基本操作"
 tag: mongodb
 ---   
-![](/images/posts/180402/mongoDB-logo.png)
+![](/images/posts/180402/mongodb-logo.png)
 ## 一、简介
 
 ### NoSQL
