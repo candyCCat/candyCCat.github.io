@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Pages和Jekyll博客搭建"
 date: 2018-03-27
 description: "windows环境下基于GitHub Pages和Jekyll的个人博客搭建"
-tag: Jekyll
+tag: 工具
 ---   
 
 

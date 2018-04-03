@@ -3,7 +3,7 @@ layout: post
 title: "markdown语法示例"
 date: 2018-03-21
 description: "总结markdown的用法"
-tag: markdown
+tag: 工具
 ---  
 参考：[语法说明(简体中文)网址](https://www.appinn.com/markdown/)<br>
 &emsp;&emsp;&emsp;[https://github.com/guodongxiaren/README/blob/master/README.md#readme](https://github.com/guodongxiaren/README/blob/master/README.md#readme)

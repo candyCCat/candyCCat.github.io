@@ -3,7 +3,7 @@ layout: post
 title: "Node.js遇到的错误"
 date: 2018-03-11
 description: "node开发，打包js文件，执行npm run build命令时，遇到的错误及解决方法"
-tag: nodejs
+tag: node
 ---  
 ## npm run build（打包报错）
 
