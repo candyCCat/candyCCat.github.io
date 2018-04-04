@@ -3,7 +3,7 @@ layout: post
 title: "WebStorm创建第一个Node.js Express App"
 date: 2018-04-2
 description: "利用express-generator创建express项目"
-tag: node
+tag: Node
 ---   
 
 
@@ -70,8 +70,29 @@ tag: node
 
 ### 启动服务器
 
-方法一：`npm start`<br>
+**方法一**：`SET DEBUG=testnode:* & npm start`<br>
+
+	F:\GitHub\pro-easy-eshop>SET DEBUG=pro-easy-eshop:* & npm start
+	
+	> pro-easy-eshop@0.0.0 start F:\GitHub\pro-easy-eshop
+	> node ./bin/www
+	
+	  pro-easy-eshop:server Listening on port 3000 +0ms
+
+
 在浏览器中打开`http://localhost:3000`运行成功。
 
-方法二：在WebStorm中，点击`编辑结构`-->`添加新配置`-->`点击绿色按钮运行`<br>
+**方法二**：在WebStorm中，点击`编辑结构`-->`添加新配置`-->`点击绿色按钮运行`<br>
 ![](/images/posts/180402/create-expressPro-step.png)![](/images/posts/180402/create-expressPro-step1.png)
+
+### views：.ejs --> .html
+	
+	var ejs = require('ejs');
+	
+	//注册html模板引擎
+	app.engine('html',ejs.__express);
+	
+	//将模板引擎换成html
+	app.set('view engine', 'html');
+
+

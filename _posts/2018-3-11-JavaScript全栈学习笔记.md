@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript全栈学习笔记（入门）"
 date: 2018-03-11
 description: "阮一峰全栈学习教程笔记"
-tag: node react
+tag: Node React
 ---   
 
 参考：[阮一峰：JavaScript 全栈工程师培训教程](http://www.ruanyifeng.com/blog/2016/11/javascript.html)<br>&emsp;&emsp;&emsp;[课堂练习的操作指导](https://github.com/ruanyf/jstraining/blob/master/demos/README.md)
@@ -636,6 +636,7 @@ REST 的核心概念:
 
 	app.listen(port);
 	console.log('Magic happens on port ' + port);
+
 ![](/images/posts/180311/express-app1.png)
 
 4) 通过浏览器访问：`localhost:8080/home`，输出`Hello World`。
@@ -717,11 +718,15 @@ REST 的核心概念:
 	  console.log(str);
 	  next();
 	});
+
+
 3）get传参：浏览器通过`http://127.0.0.1:8080/home?name=xx`访问，`req.query.name`获取参数的值：
 
 	router.get('/', function(req, res) {
 	  res.send('<h1>Hello '+req.query.name+'</h1>');
 	});
+
+
 4）占位符传参：浏览器必须严格按照`http://127.0.0.1:8080/home/xxx/yyy`的形式访问，通过`req.params.name`获取对应的参数的值:
 
 	router.get('/:id/:name', function(req, res, next) {
@@ -733,12 +738,12 @@ REST 的核心概念:
 
 流程：
 
-1. 本地开发（developing）
-2. 静态代码检查（linting）
-3. 单元测试（testing）
-4. 合并进入主干（merging）
-5. 自动构建（building）
-6. 自动发布（publishing）
+- 本地开发（developing）
+- 静态代码检查（linting）
+- 单元测试（testing）
+- 合并进入主干（merging）
+- 自动构建（building）
+- 自动发布（publishing）
 
 优点：
 
