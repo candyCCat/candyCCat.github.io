@@ -3,7 +3,7 @@ layout: post
 title: "WebStorm创建第一个Node.js Express App"
 date: 2018-04-2
 description: "利用express-generator创建express项目"
-tag: Node-express
+tag: 工具
 ---   
 
 

@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript全栈学习笔记（入门）"
 date: 2018-03-11
 description: "阮一峰全栈学习教程笔记"
-tag: Node React
+tag: Node
 ---   
 
 参考：[阮一峰：JavaScript 全栈工程师培训教程](http://www.ruanyifeng.com/blog/2016/11/javascript.html)<br>&emsp;&emsp;&emsp;[课堂练习的操作指导](https://github.com/ruanyf/jstraining/blob/master/demos/README.md)

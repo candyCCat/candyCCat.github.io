@@ -3,7 +3,7 @@ layout: post
 title: "express--app.use，app.get，route.get方法解析"
 date: 2018-04-4
 description: "express框架中，app.use、app.get、router.get等方法的辨析，帮助理解"
-tag: Node-express
+tag: Node
 ---   
 
 **前言**：近来学习nodejs的web框架express，遇到app.use、app.get、router.get等方法，理解比较混乱，特地总结此博文，以理清思路。
