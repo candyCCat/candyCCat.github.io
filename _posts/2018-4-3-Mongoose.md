@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mongoose"
-date: 2018-04-3
+date: 2018-04-03
 description: "Mongoose基本用法"
 tag: mongodb
 ---   
@@ -28,13 +28,22 @@ Schema定义了集合中文档的样式。
 
 	var db = mongoose.connect("mongodb://127.0.0.1:27017/test");
 
-	db.connection.on("error", function (error) {
+	mongoose.connection.on("error", function (error) {
     	console.log("数据库连接失败：" + error);
 	});
 
-	db.connection.on("open", function () {
+	mongoose.connection.on("open", function () {
    		console.log("------数据库连接成功！------");
 	});
+
+- `connection.on`方法的来源：connection继承了EventEmitter类；
+- `Connection ready state`：
+	- 0 = disconnected
+	- 1 = connected
+	- 2 = connecting
+	- 3 = disconnecting<br>
+	*注：每个状态改变都触发其关联的事件名*
+	
 
 ### Schema
 
