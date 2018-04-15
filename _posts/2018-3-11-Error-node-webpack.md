@@ -3,7 +3,7 @@ layout: post
 title: "Node模块：webpack遇到的错误"
 date: 2018-03-11
 description: "webpack开发，打包js文件，执行npm run build命令时，遇到的错误及解决方法"
-tag: 工具
+tag: Node
 ---  
 ## npm run build（打包报错）
 
