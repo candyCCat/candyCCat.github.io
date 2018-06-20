@@ -408,11 +408,11 @@ javascript部分：
 
 ## 遇到的问题及解决方法：
 
-### 文件上传（Multer）
+### 1、文件上传（Multer）
 
 [跳转]()
 
-### 静态资源访问受限
+### 2、静态资源访问受限
 浏览器出现错误提示：
 
 	Refused to apply style from 'http://localhost/stylesheets/bootstrap.min.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
@@ -426,7 +426,7 @@ javascript部分：
 
 	app.use(express.static(path.join(__dirname,'public')));
 
-### 文本节点（空白节点）
+### 3、文本节点（空白节点）
 
 	<ul id="ul">
 	    <li></li>
@@ -451,7 +451,7 @@ javascript部分：
 	    return node;
 	}
 
-### 点击表单提交按钮页面自动刷新（或者转跳）问题
+### 4、点击表单提交按钮页面自动刷新（或者转跳）问题
 
 场景：通过Ajax，用post方法提交表单的时候，点击`确认提交`，提交成功后，页面总是自动刷新了
 
@@ -466,8 +466,75 @@ javascript部分：
 方法二：阻止表单自动提交
 
 	event.preventDefault() //阻止form表单默认提交      
+
+方法三：`<button>`标签的type属性不为`submit`，改为：
+
+	<button type="button">提交</button>
   
  
+### 5、`<img>`自动缩放，并且不改变原本比例
+
+	<div style="width:100px;height:100px">
+		<img src="……" style="max-width:100%;max-height:100%"/>
+	</div>
+
+通过给`<img>`标签包裹设置了宽高的div，然后限制img的最大宽高，将img图片限制。
+
+### 6、用js控制：bootstrap-modal模态框
+
+一般情况下：
+
+	<!-- 按钮触发模态框 -->
+	<button type="button" data-toggle="modal" data-target="#modal">打开模态框</button>
+	
+	<!-- 模态框（Modal） -->
+	<div id="modal" class="modal fade">
+		//code
+	</div >
+
+用按钮触发模态框显示，关键是：
+
+- `data-toggle="modal"`：用于打开模态框窗口
+- `data-target="#modal"`：打开的目标
+
+如何用js控制模态框的打开，而不是点击按钮呢？
+
+- 取消按钮的 `data-toggle="modal"`和`data-target="#modal"`两个属性的设置；
+- 在js中通过以下代码控制模态框的显示和隐藏：<br>
+`$('#modal').modal('hide')`<br>
+`$('#modal').modal('show')`
 
 
+### 7、js控制：bootstrap-dropdown下拉菜单
 
+一般情况：
+
+	<div class="dropdown">
+	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown button</button>
+
+	  <div class="dropdown-menu">
+	    <a class="dropdown-item" href="#">Link 1</a>
+	    <a class="dropdown-item" href="#">Link 2</a>
+	    <a class="dropdown-item" href="#">Link 3</a>
+	  </div>
+
+	</div>
+
+- `class="dropdown"`：包裹触发节点和下拉菜单，使它们位置上关联；
+- `class="dropdown-toggle"`：用于指定下拉菜单的触发节点；
+- `data-toggle="dropdown"`：用于点击触发下拉菜单显示，绑定这个动作；
+- `class="dropdown-menu"`：指定下拉菜单。
+
+js控制下拉菜单的显示：
+
+- 取消按钮的`data-toggle="dropdown"`属性设置；
+
+	$('.dropdown-menu').dropdown("toggle");
+
+其中`$('.dropdown-menu')`是触发节点。
+
+**问题**：js控制下拉菜单后，怎么使其隐藏？网上有很多人说再次调用`$('.dropdown-menu').dropdown("toggle");`，我试了试，不行。<br>
+**解决**：用jQuery中的`slideDown()`和`slideUp()`解决这个问题：
+
+	$('.dropdown-menu').slideDown();//显示下拉菜单
+	$(".dropdown-menu").slideUp();//隐藏下拉菜单
